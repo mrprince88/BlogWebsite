@@ -1,5 +1,7 @@
 # BlogApp
 Using HTML, CSS, JS, Nodejs, MongoDB and Mongoose.
-Remembers all the posts you published
+
+Remembers all the posts you published.
+
  ![Screenshot](Screenshot.png)
 
