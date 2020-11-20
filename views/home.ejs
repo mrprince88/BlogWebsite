@@ -1,12 +1,21 @@
 <%- include("partials/header"); -%>
-<h1>Home</h1>
-<p> <%=text%> </p>
+<div class="jumbotron">
+	<div class ="container">
+		<h1>Home</h1>
+		<p> <%=text%> </p>
+	</div>
+</div>
 <% posts.forEach(function(posts){%>
- <h1><%=posts.title%></h1>
- <p>
- 	<%=posts.content.substring(0, 100)+"..."%>
- 	<a href="/posts/<%=posts._id%>">Read More</a>
- 	<input type="hidden" name="postId" value="<%=posts._id%>">
- </p>
+<div class="container post">
+	<h1><%=posts.title%></h1>
+	<p>
+		<p class="lead max-lines">
+		<%=posts.content%>
+		</p>
+		<a href="/posts/<%=posts._id%>" class="read-more" >Read More</a>
+		<input type="hidden" name="postId" value="<%=posts._id%>">
+	</p>
+	<br>
+</div>
 <% }) %>
 <%- include("partials/footer"); -%>
